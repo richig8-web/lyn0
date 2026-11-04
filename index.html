@@ -54,29 +54,75 @@
   <ul class="list">
     <li class="item">
       <div class="tag free">Free</div>
-      <h2><a href="https://github.com/richig8-web/lyn0-academy">Mission 01 — your agent learns who it works for</a></h2>
+      <h2><a href="https://github.com/richig8-web/lyn0-academy" data-goatcounter-click="hub-open-free-mission" data-goatcounter-title="Open free Mission 01">Mission 01 — your agent learns who it works for</a></h2>
       <p class="desc">The two files an agent reads before every single message: who it is, and who you are. Your agent interviews you, then writes SOUL.md and USER.md within clear character budgets. Includes templates, an installer, and six checks.</p>
       <p class="desc" style="margin-bottom:0"><span class="price">Free</span> · next step: Mission 02 below</p>
-      <a class="go" href="https://github.com/richig8-web/lyn0-academy">github.com/richig8-web/lyn0-academy</a>
+      <a class="go" href="https://github.com/richig8-web/lyn0-academy" data-goatcounter-click="hub-open-free-mission" data-goatcounter-title="Open free Mission 01">github.com/richig8-web/lyn0-academy</a>
     </li>
 
     <li class="item">
       <div class="tag paid">$9</div>
-      <h2><a href="https://richig8-web.github.io/lyn0-memory-pack/">Mission 02 — memory that survives</a></h2>
+      <h2><a href="https://richig8-web.github.io/lyn0-memory-pack/" data-goatcounter-click="hub-open-memory-pack" data-goatcounter-title="Open Memory Pack sales page">Mission 02 — memory that survives</a></h2>
       <p class="desc">A memory file the agent writes itself, the rules for what goes in it, a review skill that proposes a diff before changing anything, and the six checks that prove it loaded.</p>
-      <p class="desc" style="margin-bottom:0"><span class="price">$9</span> · one payment · <a class="go" href="https://richig8-web.github.io/lyn0-memory-pack/">richig8-web.github.io/lyn0-memory-pack</a></p>
+      <p class="desc" style="margin-bottom:0"><span class="price">$9</span> · one payment · <a class="go" href="https://richig8-web.github.io/lyn0-memory-pack/" data-goatcounter-click="hub-open-memory-pack" data-goatcounter-title="Open Memory Pack sales page">richig8-web.github.io/lyn0-memory-pack</a></p>
     </li>
 
     <li class="item">
       <div class="tag free">Free tool</div>
-      <h2><a href="https://github.com/richig8-web/hermes-memory-audit">Memory audit</a></h2>
+      <h2><a href="https://github.com/richig8-web/hermes-memory-audit" data-goatcounter-click="hub-open-audit" data-goatcounter-title="Open free Memory Audit">Memory audit</a></h2>
       <p class="desc">Reads your agent's memory files, prints every entry against its character budget, and flags what is rotting. Useful even on its own.</p>
-      <a class="go" href="https://github.com/richig8-web/hermes-memory-audit">github.com/richig8-web/hermes-memory-audit</a>
+      <a class="go" href="https://github.com/richig8-web/hermes-memory-audit" data-goatcounter-click="hub-open-audit" data-goatcounter-title="Open free Memory Audit">github.com/richig8-web/hermes-memory-audit</a>
     </li>
   </ul>
 
   <footer>
     <p style="margin:0 0 8px">Questions: <a href="mailto:lyn0academy@agentmail.to">lyn0academy@agentmail.to</a></p>
     <p style="margin:0">Missions 03 to 12 in the making. I post what the agent does on TikTok as @lyn_usa.</p>
+    <details style="margin-top:16px"><summary>Analytics and privacy</summary>
+      <p>We use GoatCounter to count page visits and button clicks without tracking cookies. Query strings, email addresses, payment details, and the delivery page are not sent by this integration. Referrers are reduced to their origin, or a known campaign name.</p>
+      <p>GoatCounter temporarily processes IP addresses and browser headers to estimate visits; it does not store them as raw analytics records. This integration respects Do Not Track and Global Privacy Control. Browser blocking can prevent measurement.</p>
+      <p><a href="https://www.goatcounter.com/help/privacy" rel="noopener noreferrer">Provider privacy policy</a>. Questions: <a href="mailto:lyn0academy@agentmail.to">lyn0academy@agentmail.to</a>.</p>
+    </details>
   </footer>
 </div>
+<!-- LYN0-ANALYTICS:START -->
+<script>
+/* LYN_0 aggregate funnel analytics. Embedded only in the public hub and sales page. */
+(function () {
+  'use strict';
+  var pages = {'/lyn0/':'/lyn0/', '/lyn0/index.html':'/lyn0/', '/lyn0-memory-pack/':'/lyn0-memory-pack/', '/lyn0-memory-pack/index.html':'/lyn0-memory-pack/'};
+  var page = pages[location.pathname];
+  if (location.hostname !== 'richig8-web.github.io' || !page || navigator.doNotTrack === '1' || navigator.globalPrivacyControl === true) return;
+  try { if (window.localStorage.getItem('skipgc') === 't') return; } catch (_) {}
+  var params = new URL('https://richig8-web.github.io' + location.pathname + location.search).searchParams;
+  var qa = params.get('analytics_test') === '1';
+  var referrer = '';
+  try { referrer = document.referrer ? new URL(document.referrer).origin : ''; } catch (_) {}
+  var source = params.get('utm_source');
+  if (['youtube', 'tiktok', 'reddit', 'github', 'newsletter'].indexOf(source) !== -1) referrer = 'campaign:' + source;
+  window.goatcounter = {no_onload: true, path: page};
+  var script = document.createElement('script');
+  script.dataset.goatcounter = 'https://lyn0academy.goatcounter.com/count';
+  script.src = 'https://gc.zgo.at/count.js';
+  script.async = true;
+  script.onload = function () {
+    var gc = window.goatcounter;
+    var original = gc.get_data;
+    gc.get_data = function (vars) {
+      var data = original(vars);
+      delete data.q;
+      delete data.s;
+      data.r = referrer;
+      if (qa) {
+        data.p = data.e ? 'qa-' + data.p : '/qa' + data.p;
+        data.t = 'QA: ' + data.t;
+      }
+      return data;
+    };
+    gc.count();
+    gc.bind_events();
+  };
+  document.head.appendChild(script);
+})();
+</script>
+<!-- LYN0-ANALYTICS:END -->
